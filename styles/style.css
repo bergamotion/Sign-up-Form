@@ -3,4 +3,237 @@
   src: url("../fonts/Norse-Bold.otf") format("opentype");
   font-weight: bold;
   font-style: normal;
+}
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  font-family: "Poppins", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+
+.logo-section {
+  background: url("../images/bg-image.jpg");
+  background-size: cover;
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.logo-section__logo-container {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 120px;
+  padding: 20px 20px;
+  margin-top: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logo-section__logo {
+  width: 85px;
+  margin-right: 10px;
+}
+.logo-section__text {
+  font-family: "Norse Bold", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 3.5rem;
+  color: white;
+  letter-spacing: 2px;
+}
+
+.main {
+  background-color: #f1f1f1;
+  width: 60%;
+}
+.main_container {
+  padding-left: 45px;
+  width: 80%;
+}
+.main__header {
+  height: calc(20vh + 120px);
+  padding-top: 14vh;
+}
+.main__text {
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1.2em;
+}
+
+.sign-up-form__title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  width: 100%;
+}
+.sign-up-form__inputs {
+  background-color: #f8f8f8;
+  box-shadow: 2px 3px 4px 0 #bfbfbf;
+  padding: 20px 0 25px 0;
+}
+.sign-up-form__label {
+  display: block;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+}
+.sign-up-form__input {
+  width: 250px;
+  height: 32px;
+  border-radius: 5px;
+  border: 1px solid #b6b6b6;
+  padding: 10px;
+  margin-top: 5px;
+  font-size: 1rem;
+}
+.sign-up-form__container {
+  padding-left: 45px;
+  width: 600px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 9%;
+}
+.sign-up-form__button {
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  margin-top: 20px;
+  height: 38px;
+  width: 200px;
+  color: #fff;
+  background-color: #0D4C92;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.1s;
+}
+.sign-up-form__button:hover {
+  border-color: #0D4C92;
+  background-color: #f1f1f1;
+  color: #0D4C92;
+}
+.sign-up-form__login-text {
+  font-size: 0.9rem;
+  margin-top: 15px;
+}
+.sign-up-form__login-link {
+  text-decoration: none;
+  color: #0D4C92;
+  transition: all 0.1s;
+}
+.sign-up-form__login-link:hover {
+  color: #0a396e;
+}
+.sign-up-form__input-block {
+  position: relative;
+}
+
+input:focus {
+  outline: none;
+  outline: 2px solid #332FD0;
+}
+input:focus:invalid {
+  outline: 2px solid #FB2576;
+}
+
+.invalid-message {
+  min-height: 35px;
+  white-space: nowrap;
+  background-color: #343434;
+  color: #f1f1f1;
+  font-size: 0.8rem;
+  line-height: 1.1rem;
+  display: flex;
+  align-items: center;
+  padding: 10px 10px;
+  border-radius: 5px;
+  position: absolute;
+  top: 60px;
+  z-index: 1;
+  transition: 0.2s;
+  display: none;
+}
+.invalid-message::after {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  background-color: inherit;
+  transform: rotate(45deg);
+  position: absolute;
+  top: -5px;
+  left: 30p;
+}
+
+input:focus:invalid + .invalid-message {
+  display: block;
+}
+
+@media (max-width: 1068px) {
+  .container {
+    display: block;
+  }
+  .logo-section {
+    background-position: center -250px;
+    width: 100%;
+  }
+  .logo-section__logo {
+    width: 70px;
+  }
+  .main {
+    width: 100%;
+    padding: 30px 0;
+  }
+  .main_container {
+    padding-left: 0;
+    margin: 0 auto;
+    max-width: 600px;
+  }
+  .main__header {
+    padding-top: 0;
+    padding-bottom: 30px;
+    height: auto;
+  }
+  .sign-up-form__container {
+    gap: 1rem 0;
+    justify-content: space-between;
+    padding-left: 0;
+    margin: 0 auto;
+    width: 80%;
+    max-width: 600px;
+  }
+  .logo-section {
+    height: 30vh;
+  }
+  .logo-section__logo-container {
+    height: 10vh;
+    margin-top: 10vh;
+  }
+}
+@media (max-width: 660px) {
+  html {
+    font-size: 14px;
+  }
+  .logo-section {
+    background-position: center;
+  }
+  .logo-section__text {
+    font-size: 3rem;
+  }
+  .sign-up-form__input-block {
+    width: 100%;
+  }
+  .sign-up-form__input {
+    width: 100%;
+  }
 }/*# sourceMappingURL=style.css.map */

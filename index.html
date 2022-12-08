@@ -6,9 +6,84 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <script src="scripts/password-validation.js" defer></script>
     <title>Document</title>
 </head>
 <body>
-    Hello world
+
+    <div class="container">
+        <aside class="logo-section">
+            <div class="logo-section__logo-container">
+                <img src="images/logo.png" alt="" class="logo-section__logo">
+                <span class="logo-section__text">Big Mountain</span>
+            </div>
+        </aside>
+        <main class="main">
+            <div class="main__header main_container">
+                <p class="main__text">To the town of Agua Fria
+                    rode a stranger one fine day.
+                    Hardly spoke to folks around him,
+                    didn't have too much to say.
+                    No one dared to ask his business.
+                </p>
+                <br>
+                <p class="main__text">Big Iron On His Heap</p>
+            </div>
+            <form action="#" class="sign-up-form">
+                <fieldset class="sign-up-form__inputs">
+                    <div class="sign-up-form__container">
+                        <h2 class="sign-up-form__title">Let's do this!</h2>
+                        <div class="sign-up-form__input-block">
+                            <label for="first-name" class="sign-up-form__label">First Name</label>
+                            <input type="text" class="sign-up-form__input" id="first-name" name="first-name" required>
+                        </div>
+                        <div class="sign-up-form__input-block">
+                            <label for="last-name" class="sign-up-form__label">Last Name</label>
+                            <input type="text" class="sign-up-form__input" id="last-name" name="last-name">
+                        </div>
+                        <div class="sign-up-form__input-block">
+                            <label for="email" class="sign-up-form__label">Email</label>
+                            <input type="email" class="sign-up-form__input" id="email" name="mail">
+                        </div>
+                        <div class="sign-up-form__input-block">
+                            <label for="phone-number" class="sign-up-form__label">Phone Number</label>
+                            <input type="tel" class="sign-up-form__input" id="phone-number" name="phone-number">    
+                        </div>
+                        <div class="sign-up-form__input-block">
+                            <label for="password" class="sign-up-form__label" >Password</label>
+                            <input type="password" class="sign-up-form__input" id="password" name="password" required>
+                            <div class="invalid-message hidden">
+                                Make sure that your password contains at least:    
+                                <br>
+                                • 8 characters and at most 20 characters
+                                <br>
+                                • One digit
+                                <br>
+                                • One upper case alphabet
+                                <br>
+                                • One lower case alphabet
+                                <br>
+                                • One special character
+                                <br>
+                                • Doesn’t contain any white space</div>
+                            </div>
+                        <div class="sign-up-form__input-block">
+                            <label for="confirm-password" class="sign-up-form__label">Confirm password</label>
+                            <input type="password" class="sign-up-form__input" id="confirm-password" name="confirm-password">
+                            <div class="invalid-message hidden">Password doesn’t match</div>
+                        </div>
+                    </div>
+                </fieldset>
+            
+                <div class="main_container">
+                    <button type="submit" class="sign-up-form__button">Create Account</button>
+                    <p class="sign-up-form__login-text">Already have an account? 
+                        <a href="#" class="sign-up-form__login-link">Log in</a>
+                    </p>
+                </div>
+            </form>
+        </main>
+    </div>
 </body>
 </html>
